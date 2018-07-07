@@ -1,0 +1,193 @@
+libsys-statistics-linux-perl (0.66-2) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+  * Add explicit Build-Depends on libmodule-build-perl
+  * Declare compliance with Debian policy 3.9.6
+  * Update copyright years for debian/* packaging files
+  * Declare package as autopkgtestable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 06 Jun 2015 10:34:04 +0200
+
+libsys-statistics-linux-perl (0.66-1) unstable; urgency=low
+
+  * Imported Upstream version 0.66
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 09 Mar 2012 08:06:00 +0100
+
+libsys-statistics-linux-perl (0.65-1) unstable; urgency=low
+
+  * Imported Upstream version 0.65
+  * Update debian/copyright information.
+    Update format to copyright-format 1.0 as released together with Debian
+    policy 3.9.3.
+  * Bump Standards-Version to 3.9.3
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 07 Mar 2012 20:58:07 +0100
+
+libsys-statistics-linux-perl (0.63-1) unstable; urgency=low
+
+  * Imported Upstream version 0.63
+  * Update copyright years for debian/* packaging
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 16 Feb 2012 21:46:09 +0100
+
+libsys-statistics-linux-perl (0.61-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+  * Imported Upstream version 0.61
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 27 Sep 2011 22:43:56 +0200
+
+libsys-statistics-linux-perl (0.60-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * Email change: Ansgar Burchardt -> ansgar@debian.org
+
+  [ Salvatore Bonaccorso ]
+  * New upstream release
+  * Email change: Salvatore Bonaccorso -> carnil@debian.org
+  * debian/copyright: Update copyright years for debian/* packaging.
+  * Bump Standards-Version to 3.9.2 (no changes needed).
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 23 Jun 2011 13:00:00 +0200
+
+libsys-statistics-linux-perl (0.59-1) unstable; urgency=low
+
+  * New upstream release
+  * Add myself to Uploaders.
+  * Refresh debian/copyright file: Refer to Debian systems.
+  * Bump Debhelper compat level to level 8: Use Build.PL without passing
+    --buildsystem=perl_build in debian/rules. Adjust Build-Depends on
+    debhelper (>= 8).
+  * Drop df-in-chroot.patch patch as it is applied upstream.
+  * Drop spelling.patch as the spelling fixes are applied upstream.
+
+ -- Salvatore Bonaccorso <salvatore.bonaccorso@gmail.com>  Mon, 04 Oct 2010 12:55:36 +0200
+
+libsys-statistics-linux-perl (0.56-2) unstable; urgency=low
+
+  * Tests involving df no longer fail in chroot environments.
+    (Closes: #591123)
+    + new patch: df-in-chroot.patch
+  * Fix spelling errors in the documentation.
+    + new patch: spelling.patch
+  * Use Build.PL.
+  * Use source format 3.0 (quilt).
+  * debian/copyright: Formatting changes for current DEP-5 proposal;
+    refer to /usr/share/common-licenses/GPL-1.
+  * Bump Standards-Version to 3.9.1.
+  * Add myself to Uploaders.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Thu, 05 Aug 2010 15:13:30 +0900
+
+libsys-statistics-linux-perl (0.56-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+
+  [ Ryan Niebur ]
+  * Update jawnsy's email address
+  * Update ryan52's email address
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Wed, 07 Oct 2009 16:16:03 -0400
+
+libsys-statistics-linux-perl (0.54-1) unstable; urgency=low
+
+  [ Franck Joncourt ]
+  * New upstream release:
+    + Fix build failures in Process.pm (RT#48458). Therefore, the patch
+      (fix-empty-wchan.patch) previously added is removed.
+  * Removed quilt framework:
+    + debian/control: Removed quilt from the BD and lowered the dependency
+      to debhelper (>=7) rather than debhelper (>=7.0.8).
+    + Removed README.source.
+    + Refreshed debian/rules.
+  * Add /me to Uploaders in debian/control, and updated debian/copyright.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Changed: Replace versioned (build-)dependency on
+    perl (>= 5.6.0-{12,16}) with an unversioned dependency on perl (as
+    permitted by Debian Policy 3.8.3).
+
+ -- Franck Joncourt <franck.mail@dthconnex.com>  Tue, 18 Aug 2009 18:33:19 +0200
+
+libsys-statistics-linux-perl (0.52-2) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * Standards-Version 3.8.2 (no changes)
+  * Updated control description
+  * Added myself to Uploaders and Copyright
+  * Change to the new short rules format
+  * Add a patch to fix build failures (Closes: #539984)
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+ -- Jonathan Yu <frequency@cpan.org>  Wed, 05 Aug 2009 09:28:04 -0400
+
+libsys-statistics-linux-perl (0.52-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Fri, 05 Jun 2009 08:17:36 -0700
+
+libsys-statistics-linux-perl (0.50-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Sun, 17 May 2009 14:30:21 -0700
+
+libsys-statistics-linux-perl (0.49-1) unstable; urgency=low
+
+  * New upstream release
+  * standards version 3.8.1
+  * lowercase first character of short description
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Sun, 15 Mar 2009 18:23:51 -0700
+
+libsys-statistics-linux-perl (0.48-1) unstable; urgency=low
+
+  [ Rene Mayorga ]
+  * New upstream release
+  * debian/control 
+    + remove libmodule-build-perl, dh7 prefer MakeMaker
+    + move perl from B-D-I to B-D
+    + add libtest-pod-perl, libtest-pod-coverage-perl to B-D-I
+    + add myself to uploaders
+  * remove libsys-statistics-linux-perl.docs, it only coantains README
+    which is a copy from the POD
+  * debian/control: update my email address.
+
+  [ gregor herrmann ]
+  * debian/copyright: adjust years of upstream copyright to what upstream
+    says.
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * New upstream release.
+  * Update years of upstream copyright in debian/copyright.
+
+  [ Ryan Niebur ]
+  * New upstream release (Closes: #518842)
+  * add myself to uploaders
+  * update copyright for debian/*
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Sun, 08 Mar 2009 17:27:54 -0700
+
+libsys-statistics-linux-perl (0.42-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #502237)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 14 Oct 2008 14:12:07 -0500
