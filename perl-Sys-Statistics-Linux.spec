@@ -4,15 +4,14 @@
 #
 Name     : perl-Sys-Statistics-Linux
 Version  : 0.66
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/B/BL/BLOONIX/Sys-Statistics-Linux-0.66.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BL/BLOONIX/Sys-Statistics-Linux-0.66.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libs/libsys-statistics-linux-perl/libsys-statistics-linux-perl_0.66-2.debian.tar.xz
 Summary  : 'Front-end module to collect system statistics'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
-Requires: perl-Sys-Statistics-Linux-man
-Requires: perl(UNIVERSAL::require)
+BuildRequires : buildreq-cpan
 BuildRequires : perl(UNIVERSAL::require)
 
 %description
@@ -21,19 +20,20 @@ Sys::Statistics::Linux - Front-end module to collect system statistics
 SYNOPSIS
 use Sys::Statistics::Linux;
 
-%package man
-Summary: man components for the perl-Sys-Statistics-Linux package.
-Group: Default
+%package dev
+Summary: dev components for the perl-Sys-Statistics-Linux package.
+Group: Development
+Provides: perl-Sys-Statistics-Linux-devel = %{version}-%{release}
 
-%description man
-man components for the perl-Sys-Statistics-Linux package.
+%description dev
+dev components for the perl-Sys-Statistics-Linux package.
 
 
 %prep
-tar -xf %{SOURCE1}
-cd ..
 %setup -q -n Sys-Statistics-Linux-0.66
-mkdir -p %{_topdir}/BUILD/Sys-Statistics-Linux-0.66/deblicense/
+cd ..
+%setup -q -T -D -n Sys-Statistics-Linux-0.66 -b 1
+mkdir -p deblicense/
 mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/Sys-Statistics-Linux-0.66/deblicense/
 
 %build
@@ -59,9 +59,9 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -70,22 +70,22 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/Compilation.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/CpuStats.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/DiskStats.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/DiskUsage.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/FileStats.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/LoadAVG.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/MemStats.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/NetStats.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/PgSwStats.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/ProcStats.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/Processes.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/SockStats.pm
-/usr/lib/perl5/site_perl/5.26.1/Sys/Statistics/Linux/SysInfo.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/Compilation.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/CpuStats.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/DiskStats.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/DiskUsage.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/FileStats.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/LoadAVG.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/MemStats.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/NetStats.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/PgSwStats.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/ProcStats.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/Processes.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/SockStats.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/SysInfo.pm
 
-%files man
+%files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Sys::Statistics::Linux.3
 /usr/share/man/man3/Sys::Statistics::Linux::Compilation.3
