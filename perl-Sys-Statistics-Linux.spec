@@ -70,20 +70,20 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/Compilation.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/CpuStats.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/DiskStats.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/DiskUsage.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/FileStats.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/LoadAVG.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/MemStats.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/NetStats.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/PgSwStats.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/ProcStats.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/Processes.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/SockStats.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Sys/Statistics/Linux/SysInfo.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/Compilation.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/CpuStats.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/DiskStats.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/DiskUsage.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/FileStats.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/LoadAVG.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/MemStats.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/NetStats.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/PgSwStats.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/ProcStats.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/Processes.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/SockStats.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Sys/Statistics/Linux/SysInfo.pm
 
 %files dev
 %defattr(-,root,root,-)
