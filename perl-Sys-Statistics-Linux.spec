@@ -4,7 +4,7 @@
 #
 Name     : perl-Sys-Statistics-Linux
 Version  : 0.66
-Release  : 20
+Release  : 21
 URL      : https://cpan.metacpan.org/authors/id/B/BL/BLOONIX/Sys-Statistics-Linux-0.66.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BL/BLOONIX/Sys-Statistics-Linux-0.66.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libs/libsys-statistics-linux-perl/libsys-statistics-linux-perl_0.66-2.debian.tar.xz
@@ -117,17 +117,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/Compilation.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/CpuStats.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/DiskStats.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/DiskUsage.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/FileStats.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/LoadAVG.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/MemStats.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/NetStats.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/PgSwStats.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/ProcStats.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/Processes.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/SockStats.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Sys/Statistics/Linux/SysInfo.pm
+/usr/lib/perl5/*
