@@ -4,7 +4,7 @@
 #
 Name     : perl-Sys-Statistics-Linux
 Version  : 0.66
-Release  : 27
+Release  : 28
 URL      : https://cpan.metacpan.org/authors/id/B/BL/BLOONIX/Sys-Statistics-Linux-0.66.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BL/BLOONIX/Sys-Statistics-Linux-0.66.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libs/libsys-statistics-linux-perl/libsys-statistics-linux-perl_0.66-2.debian.tar.xz
